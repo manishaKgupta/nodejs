@@ -12,16 +12,16 @@ hooks:
   BeforeInstall:
     - location: script/install.sh
       timeout: 300
-      runas: root
+      #runas: root
 
 
   ApplicationStop:
     - location: script/stop.sh
       timeout: 300
-      runas: root
+      #runas: root
 
 
   ApplicationStart:
     - location: script/start.sh
       timeout: 300
-      runas: root
+      #runas: root
