@@ -10,18 +10,18 @@ files:
     
 hooks:
   BeforeInstall:
-    - location: script/install.sh
+    - location: /home/ubuntu/nodejs/script/install.sh
       timeout: 300
       runas: root
 
 
   ApplicationStop:
-    - location: script/stop.sh
+    - location: /home/ubuntu/nodejs/script/stop.sh
       timeout: 300
       #runas: root
 
 
   ApplicationStart:
-    - location: script/start.sh
+    - location: /home/ubuntu/nodejs/script/start.sh
       timeout: 300
       #runas: root
