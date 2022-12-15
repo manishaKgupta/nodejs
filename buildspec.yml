@@ -1,13 +1,13 @@
 version: 0.2
 env:
   secrets-manager:
-    MONGODB_URL: "PRAJWAL_MONGO_SECRET:mongodb_url"
+    MONGODB_URL: "MANISHA_MONGO_SECRET:mongodb_url"
     
 phases: 
   pre_build:
     commands: 
       - echo Build started on `date`
-      - echo "MONGODB_URL_PRAJWAL=$MONGODB_URL" > .env
+      - echo "MONGODB_URL_MANISHA=$MONGODB_URL" > .env
       
   build:
     commands: 
