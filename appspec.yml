@@ -1,27 +1,25 @@
 version: 0.0
 os: linux
-runas: ubuntu
+runas: root
 
 files:
   - source: /
-    destination: /home/ubuntu/nodejs/*
+    destination: /home/ubuntu/nodejs/
     overwrite: true
-    timeout: 500
-    
+files_exists_behaviour: OVERWRITE
+
 hooks:
   BeforeInstall:
-    - location: /home/ubuntu/nodejs/script/install.sh
+    - location: script/install.sh
       timeout: 300
       runas: root
-
-
+      
   ApplicationStop:
-    - location: /home/ubuntu/nodejs/script/stop.sh
+    - location: script/stop.sh
       timeout: 300
-      #runas: root
-
-
+      runas: root
+  
   ApplicationStart:
-    - location: /home/ubuntu/nodejs/script/start.sh
+    - location: script/start.sh
       timeout: 300
-      #runas: root
+      runas: root
